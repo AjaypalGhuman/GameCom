@@ -1,3 +1,4 @@
+//Used to indicate if the user finds a post unhelpful (similar to a dislike)
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

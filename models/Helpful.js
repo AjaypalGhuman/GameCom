@@ -1,3 +1,4 @@
+//Used to indicate if the user finds a post helpful (similar to a like)
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
