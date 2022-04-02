@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS sportcalendar_db;
+DROP DATABASE IF EXISTS gamecom_db;
 
-CREATE DATABASE sportcalendar_db;
+CREATE DATABASE gamecom_db;
