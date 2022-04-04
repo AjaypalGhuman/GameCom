@@ -50,7 +50,7 @@ var displayNews = function(data){
         //create card-header element to hold the News's title
         var newsTitle = document.createElement("h5");
         //newsTitle.classList = "card-header";
-        newsTitle.textContent = data[i].title;
+        newsTitle.textContent = data[i].title;        
         console.log(newsTitle); 
 
         //append to container
