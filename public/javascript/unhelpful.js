@@ -1,10 +1,10 @@
-async function upvoteClickHandler(event) {
+async function unhelpfulClickHandler(event) {
     event.preventDefault();
   
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
-    const response = await fetch('/api/posts/upvote', {
+    const response = await fetch('/api/posts/unhelpful', {
       method: 'PUT',
       body: JSON.stringify({
         post_id: id
@@ -21,5 +21,5 @@ async function upvoteClickHandler(event) {
     }
   }
   
-  document.querySelector('.upvote-btn').addEventListener('click', upvoteClickHandler);
+  document.querySelector('.unhelpful-btn').addEventListener('click', unhelpfulClickHandler);
   
