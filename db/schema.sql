@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS gamecom_db;
+
+CREATE DATABASE gamecom_db;
