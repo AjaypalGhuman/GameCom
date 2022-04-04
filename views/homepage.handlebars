@@ -7,8 +7,17 @@
 
         </div>
     </div>
-    <div class="col-12 col-lg-8 bg-light p-3 mb-3"></div>
+    <div class="col-12 col-lg-8 bg-light p-3 mb-3">
+        <ol class="post-list">
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post }}
+        </li>
+        {{/each}}
+        </ol>
+    </div>
 </section>
 
 
 <script src="/javascript/game-news.js"></script>
+
