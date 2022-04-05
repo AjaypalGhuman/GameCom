@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
       'id',      
       'title',
       'game_name',
+      'description',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM helpful WHERE post.id = helpful.post_id)'), 'helpful_count'],
       [sequelize.literal('(SELECT COUNT(*) FROM unhelpful WHERE post.id = unhelpful.post_id)'), 'unhelpful_count']
@@ -54,6 +55,7 @@ router.get('/post/:id', (req, res) => {
           'id',
           'title',
           'game_name',
+          'description',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM helpful WHERE post.id = helpful.post_id)'), 'helpful_count'],
           [sequelize.literal('(SELECT COUNT(*) FROM unhelpful WHERE post.id = unhelpful.post_id)'), 'unhelpful_count']
