@@ -1,0 +1,39 @@
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="game-name">Game Name</label>
+      <input id="game-name" name="game-name" />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <input id="description" name="description" />
+    </div>
+    <form action="/profile" method="post" enctype="multipart/form-data">
+      <label for="description">Description</label>
+      <input type="file" name="post-image"  />
+    </form>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Blog Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/account/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

@@ -16,6 +16,7 @@ class Post extends Model {
                     'id',
                     'title',
                     'game_name',
+                    'description',
                     'created_at',
                     [
                         // use MySQL aggregate function query to get a count of how many helpful marks the post has and return it under the name `helpful_count`
@@ -40,6 +41,7 @@ class Post extends Model {
                     'id',
                     'title',
                     'game_name',
+                    'description',
                     'created_at',
                     [
                         // use MySQL aggregate function query to get a count of how many helpful marks the post has and return it under the name `helpful_count`
