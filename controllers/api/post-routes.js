@@ -115,7 +115,9 @@ router.put('/unhelpful', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
-      title: req.body.title
+      title: req.body.title,
+      game_name: req.body.game_name,
+      description: req.body.description
     },
     {
       where: {

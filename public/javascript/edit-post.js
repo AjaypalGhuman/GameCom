@@ -1,6 +1,6 @@
 async function editFormHandler(event) {
     event.preventDefault();
-  
+
     const title = document.querySelector('input[name="post-title"]').value.trim();
     const game_name = document.querySelector('input[name="game-name"]').value;
     const description = document.querySelector('input[name="description"]').value;
@@ -26,6 +26,6 @@ async function editFormHandler(event) {
       alert(response.statusText);
     }
   }
-  
+
   document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
   

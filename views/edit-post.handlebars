@@ -6,8 +6,8 @@
   <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{post.game_name}})</span>
-      <p>({{post.description}})</p>
+      <input name="game-name" type="text" value="{{post.game_name}}" />
+      <input name="description" type="text" value="{{post.description}}" />
     </div>
     <div>
       {{post.helpful_count}} {{format_plural "helpful" post.helpful_count}} by you on {{format_date post.created_at}}
