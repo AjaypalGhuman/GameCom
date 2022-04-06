@@ -12,16 +12,18 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">GameCom</a>
-      </h1>
       <nav>
-        {{#if loggedIn}}
-        <a href="/account">My Account</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+        <ul>
+          <li>
+            <a href="/" style="color: purple">GameCom</a>
+            {{#if loggedIn}}
+            <a href="/account" style="color: purple">My Account</a>
+            <button id="logout" class="btn-no-style">Logout</button>
+            {{else}}
+            <a href="/login" style="color: purple">Login</a>
+            {{/if}}
+          </li>
+        </ul>
       </nav>
     </header>
     <main class ="container-fluid mx-auto">
