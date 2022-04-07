@@ -33,7 +33,7 @@ const postdata = [
         title: 'In hac habitasse platea dictumst.',
         game_name: 'Diablo III',
         description: 'Impedit, quo. Minima voluptatem, nam voluptas dolores id magni placeat? Aliquam veritatis sapiente ad officia quisquam asperiores libero similique molestias iure earum.',
-        image: 'Images\\.diablojpg',
+        image: 'Images\\diablo.jpg',
         user_id: 1
     },
     {

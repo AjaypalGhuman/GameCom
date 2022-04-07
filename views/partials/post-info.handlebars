@@ -1,9 +1,9 @@
 <article class="post">
   <div class="title">
     <h3>({{title}})</h3>
+    <image src="http://localhost:3001/{{image}}" class="img-thumbnail"></image>
     <span>({{game_name}})</span>
-    <p>({{description}})</p>
-    <image src="http://localhost:3001/{{image}}"></image>
+    <p>({{description}})</p>    
   </div>
   <div class="meta">
     {{helpful_count}} {{format_plural "helpful" helpful_count}} by {{user.username}} on {{format_date created_at}}
