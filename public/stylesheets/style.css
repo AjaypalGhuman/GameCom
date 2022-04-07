@@ -12,7 +12,7 @@ body, html {
 
 /* header styling start */
 header {
-  background-color:lightsteelblue;
+  background-image: url("../images/header-1.png");
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -183,7 +183,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: purple;
+  color: rgb(240, 8, 240);
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -193,7 +193,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: rgb(189, 56, 189);
+  color: rgb(255, 0, 255);
 }
 
 .delete-post-btn {
@@ -226,21 +226,27 @@ h6 {
 }
 
 .unhelpful-btn {
+  background-image: url(../images/bad.png);
   background-color: lightskyblue;
   transition: background-color .1s;
+  width: 100px;
+  height: 47px;
 }
 
 .unhelpful-btn:hover {
-  background-color: blue;
-}
-
-.helpful-btn:hover {
   background-color: magenta;
 }
 
+.helpful-btn:hover {
+  background-color: blue;
+}
+
 .helpful-btn {
+  background-image: url(../images/good.png);
   background-color: hotpink;
   transition: background-color .1s;
+  width: 100px;
+  height: 47px;
 }
 
 .comment-form {
