@@ -111,6 +111,7 @@ button:hover {
 }
 
 .post-list {
+  list-style:square;
   margin: 0;
   padding: 0;
 }
@@ -183,7 +184,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: rgb(240, 8, 240);
+  color: magenta;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -193,7 +194,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: rgb(255, 0, 255);
+  color: purple;
 }
 
 .delete-post-btn {
