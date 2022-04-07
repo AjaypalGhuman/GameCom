@@ -17,6 +17,7 @@ class Post extends Model {
                     'title',
                     'game_name',
                     'description',
+                    'image',
                     'created_at',
                     [
                         // use MySQL aggregate function query to get a count of how many helpful marks the post has and return it under the name `helpful_count`
@@ -75,6 +76,9 @@ Post.init(
       description: {
         type: DataTypes.TEXT,
         allowNull: false
+      },
+      image: {
+        type: DataTypes.STRING,        
       },
       user_id: {
         type: DataTypes.INTEGER,

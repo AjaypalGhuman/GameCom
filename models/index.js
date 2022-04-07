@@ -100,14 +100,14 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
 // a post can have one image
-Post.hasOne(Image,{
-    foreignKey: 'post_id'
-});
-//an image belongs to a post
-Image.belongsTo(Post, {
-    foreignKey: 'post_id',
-    onDelete: 'SET NULL'
-});
+// Post.hasOne(Image,{
+//     foreignKey: 'post_id'
+// });
+// //an image belongs to a post
+// Image.belongsTo(Post, {
+//     foreignKey: 'post_id',
+//     onDelete: 'SET NULL'
+// });
 
 
 module.exports = {User, Post, Comment, Helpful, Unhelpful, Image};

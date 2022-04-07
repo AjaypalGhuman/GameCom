@@ -2,8 +2,11 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment, Helpful, Unhelpful } = require('../../models');
 const withAuth = require('../../utils/auth');
+const upload = require('../../utils/upload');
 
-// get all users
+
+
+// get all posts
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
@@ -11,6 +14,7 @@ router.get('/', (req, res) => {
       'id',
       'title',
       'game_name',
+      'image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM helpful WHERE post.id = helpful.post_id)'), 'helpful_count'],
       [sequelize.literal('(SELECT COUNT(*) FROM unhelpful WHERE post.id = unhelpful.post_id)'), 'unhelpful_count']
@@ -46,6 +50,8 @@ router.get('/:id', (req, res) => {
       'id',
       'title',
       'game_name',
+      'description',
+      'image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM helpful WHERE post.id = helpful.post_id)'), 'helpful_count'],
       [sequelize.literal('(SELECT COUNT(*) FROM unhelpful WHERE post.id = unhelpful.post_id)'), 'unhelpful_count']
@@ -78,11 +84,12 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', [ upload], (req, res) => {
   Post.create({
     title: req.body.title,
     game_name: req.body.game_name,
     description: req.body.description,
+    image: req.file.path,
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
@@ -117,7 +124,8 @@ router.put('/:id', withAuth, (req, res) => {
     {
       title: req.body.title,
       game_name: req.body.game_name,
-      description: req.body.description
+      description: req.body.description,
+      image: req.file.path,
     },
     {
       where: {

@@ -8,13 +8,13 @@
     </div>
     <div class="col-12 col-lg-8 bg-light p-3 mb-3 flex-child">
         <h3>Post Feed!</h3>
-        <ol class="post-list">
+        <ul class="post-list">
         {{#each posts as |post|}}
         <li>
             {{> post-info post }}
         </li>
         {{/each}}
-        </ol>
+        </ul>
     </div>
 </section>
 
