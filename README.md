@@ -32,7 +32,7 @@ Once the application is connected to the server, the user will be able to get, c
 
 Deployed application:
 
-
+https://supergamecom.herokuapp.com/
 
 ## Programming Languages
 
