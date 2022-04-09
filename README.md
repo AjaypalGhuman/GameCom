@@ -24,6 +24,16 @@ A working Express.js API was configured to use Sequelize to interact with a MySQ
 5. Run `npm run seed` to seed data to the database
 6. Run `npm start` to connect to the server 
 
+## Usage  
+
+Once the application is connected to the server, the user will be able to get, create, edit and delete posts. Create an account and log into it. Mark other user's post as helpful or unhelpful. Add comments to posts and see the latests news in the gaming community
+
+## Links
+
+Deployed application:
+
+
+
 ## Programming Languages
 
   * JavaScript
