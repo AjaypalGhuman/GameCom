@@ -1,5 +1,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
+
+    // function to creeate and add a post to a users feed
   
     const title = document.querySelector('input[name="post-title"]').value;
     const game_name = document.querySelector('input[name="game-name"]').value;

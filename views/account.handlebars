@@ -1,6 +1,6 @@
 <section>
   <h2>Create New Post</h2>
-
+<!-- form used to create new posts on your account page and also the homepage -->
   <form class="new-post-form">
     <div>
       <label for="post-title">Title</label>
@@ -14,6 +14,7 @@
       <label for="description">Description</label>
       <input id="description" placeholder="Description" name="description" />
     </div>
+    <!-- code for unadded image functionality -->
     <!--<form action="/profile" method="post" enctype="multipart/form-data">
       <label for="description">Description</label>
       <input type="file" name="post-image"  /> 
@@ -21,7 +22,7 @@
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
-
+<!-- shows all the blog posts you have made -->
 {{#if posts.length}}
 <section class="post-container">
   <h2>Your Blog Posts</h2>

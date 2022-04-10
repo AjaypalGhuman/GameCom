@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get user by id
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
@@ -110,6 +111,7 @@ router.post('/login', (req, res) => {
   });
 });
 
+// user can logout only if they are already logged In
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {

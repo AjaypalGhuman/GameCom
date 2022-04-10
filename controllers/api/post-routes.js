@@ -37,6 +37,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get route used to get specific post by post id
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -78,6 +79,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// allows user to create post only after logged In
 router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
@@ -138,6 +140,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
+// used to delete a specific post by post id
 router.delete('/:id', withAuth, (req, res) => {
   console.log('id', req.params.id);
   Post.destroy({

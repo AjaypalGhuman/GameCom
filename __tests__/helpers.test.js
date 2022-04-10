@@ -1,5 +1,7 @@
 const {format_date, format_plural} = require('../utils/helpers');
 
+// created tests to test out helper.js functionality
+
 test('format_plural() returns a pluralized word', () => {
     const word1 = format_plural('tiger', 1);
     const word2 = format_plural('lion', 2);

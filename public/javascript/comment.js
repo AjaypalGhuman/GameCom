@@ -1,5 +1,7 @@
 async function commentFormHandler(event) {
     event.preventDefault();
+
+    // function used to help display comments underneath a respective post
   
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
     const post_id = window.location.toString().split('/')[

@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// displays all comments underneath a post
 router.get('/', (req, res) => {
   Comment.findAll()
     .then(dbCommentData => res.json(dbCommentData))
@@ -24,7 +25,7 @@ router.post('/', withAuth, (req, res) => {
       res.status(400).json(err);
     });
 });
-
+// deletes a comment underneath a post 
 router.delete('/:id', withAuth, (req, res) => {
   Comment.destroy({
     where: {

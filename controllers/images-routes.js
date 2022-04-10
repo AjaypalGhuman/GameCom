@@ -1,0 +1,1 @@
+// unused images route used to display images to the page

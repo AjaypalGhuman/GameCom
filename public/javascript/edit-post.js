@@ -1,6 +1,8 @@
 async function editFormHandler(event) {
     event.preventDefault();
 
+    // function used to edit posts in account using the edit-post form
+
     const title = document.querySelector('input[name="post-title"]').value.trim();
     const game_name = document.querySelector('input[name="game-name"]').value;
     const description = document.querySelector('input[name="description"]').value;

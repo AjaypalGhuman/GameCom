@@ -1,5 +1,7 @@
 const { Post } = require('../models');
 
+// seeded post data that displays on the homepage
+
 const postdata = [
     {
         title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
