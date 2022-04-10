@@ -9,6 +9,8 @@ GameCom users can also create an account to be able to post their own articles, 
 
 A working Express.js API was configured to use Sequelize to interact with a MySQL database created using models and associations. It handles user authentication and provides password encryption. To create the visual structure of this application handlebars were used. Additionally, this application uses a third party API (Gaming-News ) to provide news related to the gaming world. RESTful CRUD operations were tested using Insomnia
 
+<img width="1440" alt="Screen Shot 2022-04-10 at 1 40 57 AM" src="https://user-images.githubusercontent.com/95589049/162603155-60609a0a-5618-4aee-b543-0021c0d883b6.png">
+
 
 ## Installation
 
