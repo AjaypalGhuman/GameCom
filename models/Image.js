@@ -4,6 +4,8 @@ const sequelize = require('../config/connection');
 
 class Image extends Model {}
 
+// currently inactive model to display images to a post
+
 Image.init(
     {
         id: {

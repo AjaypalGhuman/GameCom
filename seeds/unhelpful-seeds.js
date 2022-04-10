@@ -1,5 +1,7 @@
 const { Unhelpful } = require('../models');
 
+// seeded data of the posts marked as unhelpful
+
 const unhelpfuldata = [
     {
         user_id: 1,

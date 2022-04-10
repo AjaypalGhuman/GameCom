@@ -4,6 +4,8 @@ const sequelize = require('../config/connection');
 
 class Helpful extends Model {}
 
+// created model for marking posts as unhelpful
+
 Helpful.init(
     {
       id: {

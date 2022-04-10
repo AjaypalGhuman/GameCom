@@ -10,6 +10,7 @@ router.get('/', withAuth, (req, res) => {
         user_id: req.session.user_id
       },
       attributes: [
+        // attributes displayed with each post
         'id',
         'title',
         'game_name',
@@ -44,6 +45,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+// users can only edit post when logged in
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {

@@ -1,5 +1,6 @@
 const { Image } = require('../models');
 
+// unused image seeds used to render images with posts
 const imagedata = [
 
 ];

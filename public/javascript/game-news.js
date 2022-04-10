@@ -10,6 +10,8 @@ var getNews = function(){
         }
     };
 
+    // fetch the api data for game news  and display it on the homepage of the blog
+
     fetch('https://gaming-news.p.rapidapi.com/news', options)
 	.then(response => {
         if(response.ok){
@@ -22,6 +24,7 @@ var getNews = function(){
             alert("Error: " + response.statusText);
         }        
     })	
+    // displays alert that the api is unable to load
 	.catch(err => {
         console.error(err);
         alert("Unable to connect to Gaming-News API");

@@ -1,6 +1,8 @@
 async function unhelpfulClickHandler(event) {
   event.preventDefault();
 
+  // function to mark posts as unhelpful by clicking on the unhelpful button
+
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
@@ -16,6 +18,8 @@ async function unhelpfulClickHandler(event) {
 
   if (response.ok) {
     document.location.reload();
+
+    // if button already clicked, will not allow the user to mark a post as unhelpful multiple times
   } else {
     alert(response.statusText);
   }

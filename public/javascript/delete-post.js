@@ -1,5 +1,7 @@
 async function deleteFormHandler(event) {
     event.preventDefault();
+
+    // functionality used to delete a post from the account
   
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1

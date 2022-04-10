@@ -1,6 +1,8 @@
 async function helpfulClickHandler(event) {
     event.preventDefault();
   
+
+    // functionality to click helful button and mark posts as helpful 
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -16,6 +18,7 @@ async function helpfulClickHandler(event) {
   
     if (response.ok) {
       document.location.reload();
+      // will not allow user to mark posts as unhelpful multiple times
     } else {
       alert(response.statusText);
     }

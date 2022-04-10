@@ -1,5 +1,7 @@
 const { Helpful } = require('../models');
 
+// seeded data for posts marked as helpful
+
 const helpfuldata = [
     {
         user_id: 1,
